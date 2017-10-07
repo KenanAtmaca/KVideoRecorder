@@ -51,7 +51,7 @@ class KVideoRecorder: NSObject {
     var delegate:KVideoRecorderDelegate?
     var takePhotoImage:UIImage?
     var videoOutputUrl:URL?
-
+    
     
      init(to view:UIView) {
         super.init()
@@ -322,6 +322,15 @@ class KVideoRecorder: NSObject {
         }
         
         return result
+    }
+    
+    func removeView() {
+        if videoTimer != nil {videoTimer.invalidate()}
+        session = nil
+        videoOutputUrl = nil
+        takePhotoImage = nil
+        recordTime = 0
+        previewLayer.removeFromSuperlayer()
     }
     
     func vidURL(name:String) -> URL {

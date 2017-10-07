@@ -29,6 +29,7 @@ iOS 11 Record Video &amp; Take Photo Helper Class 📹
         recorder.isExist(name:)
         recorder.delete(name:)
         recorder.vidURL(name:)
+        recorder.removeView()
 ```
 
 ##### Usable Veriables
